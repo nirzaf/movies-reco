@@ -1,5 +1,7 @@
 import { Box, Typography, Grid, Paper, Rating } from '@mui/material';
 
+import shawshankPoster from '../assets/images/movie-posters/shawshank.svg';
+
 // Mock data for movie details
 const movieDetails = {
   id: 1,
@@ -11,7 +13,7 @@ const movieDetails = {
   genre: 'Drama',
   duration: '2h 22m',
   plot: 'Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.',
-  imageUrl: 'https://via.placeholder.com/500x750?text=Shawshank+Redemption',
+  imageUrl: shawshankPoster,
 };
 
 const MovieDetail = () => {

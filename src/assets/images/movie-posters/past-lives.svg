@@ -1,0 +1,10 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#16a085"/>
+  <text x="150" y="100" font-family="Arial" font-size="28" fill="white" text-anchor="middle">Past Lives</text>
+  <rect x="75" y="160" width="150" height="200" fill="#1abc9c"/>
+  <circle cx="120" cy="240" r="30" fill="#3498db" opacity="0.7"/>
+  <circle cx="180" cy="240" r="30" fill="#3498db" opacity="0.7"/>
+  <circle cx="150" cy="240" r="30" fill="#3498db" opacity="0.9"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Drama, Romance (2023)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★☆ 8.1/10</text>
+</svg>

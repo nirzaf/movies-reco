@@ -1,0 +1,67 @@
+/* Wireframe styling overrides */
+
+/* Card styling */
+.MuiCard-root {
+  border: 1px solid #cccccc !important;
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Paper styling */
+.MuiPaper-root {
+  border: 1px solid #cccccc !important;
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Button styling */
+.MuiButton-root {
+  border: 1px solid #333333 !important;
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+.MuiButton-contained {
+  background-color: #e0e0e0 !important;
+  color: #333333 !important;
+}
+
+/* Typography contrast */
+.MuiTypography-root {
+  color: #333333 !important;
+}
+
+/* AppBar styling */
+.MuiAppBar-root {
+  background-color: #e0e0e0 !important;
+  color: #333333 !important;
+  border-bottom: 1px solid #cccccc !important;
+  box-shadow: none !important;
+}
+
+/* Table styling */
+.MuiTableCell-root {
+  border: 1px solid #cccccc !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background-color: #e0e0e0 !important;
+  font-weight: bold !important;
+}
+
+/* Background elements */
+.MuiBox-root, .MuiContainer-root {
+  background-color: transparent !important;
+}
+
+/* Ensure text contrast */
+a, p, h1, h2, h3, h4, h5, h6, span, div {
+  color: #333333 !important;
+}
+
+/* Special case for featured service paper */
+[style*="background-image: linear-gradient"] {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  border: 2px dashed #999999 !important;
+}

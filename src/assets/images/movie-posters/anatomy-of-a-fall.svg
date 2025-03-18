@@ -1,0 +1,11 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#d35400"/>
+  <text x="150" y="80" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Anatomy of</text>
+  <text x="150" y="110" font-family="Arial" font-size="24" fill="white" text-anchor="middle">a Fall</text>
+  <rect x="75" y="160" width="150" height="200" fill="#e67e22"/>
+  <polygon points="150,160 200,260 100,260" fill="#f39c12"/>
+  <line x1="150" y1="160" x2="150" y2="260" stroke="#d35400" stroke-width="3"/>
+  <line x1="125" y1="210" x2="175" y2="210" stroke="#d35400" stroke-width="3"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Crime, Drama (2023)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★☆ 7.9/10</text>
+</svg>

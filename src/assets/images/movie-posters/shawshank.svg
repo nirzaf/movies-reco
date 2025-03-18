@@ -1,0 +1,9 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#34495e"/>
+  <text x="150" y="100" font-family="Arial" font-size="24" fill="white" text-anchor="middle">The Shawshank</text>
+  <text x="150" y="130" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Redemption</text>
+  <rect x="75" y="160" width="150" height="200" fill="#2c3e50"/>
+  <circle cx="150" cy="260" r="50" fill="#3498db"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Drama (1994)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★★ 9.3/10</text>
+</svg>

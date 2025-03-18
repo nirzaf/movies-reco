@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {

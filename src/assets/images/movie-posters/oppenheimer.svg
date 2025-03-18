@@ -1,0 +1,10 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#2c3e50"/>
+  <text x="150" y="100" font-family="Arial" font-size="28" fill="white" text-anchor="middle">Oppenheimer</text>
+  <rect x="75" y="160" width="150" height="200" fill="#34495e"/>
+  <circle cx="150" cy="260" r="60" fill="#e74c3c"/>
+  <circle cx="150" cy="260" r="40" fill="#c0392b"/>
+  <circle cx="150" cy="260" r="20" fill="#f39c12"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Biography, Drama (2023)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★☆ 8.4/10</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#7f8c8d"/>
+  <text x="150" y="100" font-family="Arial" font-size="28" fill="white" text-anchor="middle">The Killer</text>
+  <rect x="75" y="160" width="150" height="200" fill="#95a5a6"/>
+  <polygon points="150,180 180,260 120,260" fill="#c0392b"/>
+  <rect x="140" y="260" width="20" height="60" fill="#2c3e50"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Action, Crime, Thriller (2023)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★☆ 7.9/10</text>
+</svg>

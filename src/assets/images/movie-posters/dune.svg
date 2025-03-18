@@ -1,0 +1,8 @@
+<svg width="300" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="450" fill="#d35400"/>
+  <text x="150" y="100" font-family="Arial" font-size="28" fill="white" text-anchor="middle">Dune: Part Two</text>
+  <rect x="75" y="160" width="150" height="200" fill="#e67e22"/>
+  <path d="M75,260 L225,260 L150,360 Z" fill="#f39c12"/>
+  <text x="150" y="400" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Sci-Fi, Adventure (2024)</text>
+  <text x="150" y="425" font-family="Arial" font-size="16" fill="#f1c40f" text-anchor="middle">★★★★☆ 8.5/10</text>
+</svg>
