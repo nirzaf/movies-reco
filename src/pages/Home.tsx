@@ -71,16 +71,24 @@ const Home = () => {
             backgroundColor: 'rgba(0,0,0,.3)',
           }}
         />
-        <Container maxWidth="lg" sx={{ position: 'relative', p: { xs: 3, md: 6 } }}>
-          <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-            Discover Your Next Favorite Movie
-          </Typography>
-          <Typography variant="h5" color="inherit" paragraph>
-            Personalized recommendations based on your taste
-          </Typography>
-          <Button variant="contained" size="large" sx={{ mt: 2 }}>
-            Explore Now
-          </Button>
+        <Container maxWidth="lg" sx={{ position: 'relative', p: { xs: 3, md: 6 } }}>          
+          <Box sx={{ 
+            backgroundColor: 'rgba(0,0,0,0.6)', 
+            p: 3, 
+            borderRadius: 2,
+            backdropFilter: 'blur(2px)',
+            maxWidth: 'fit-content'
+          }}>
+            <Typography component="h1" variant="h3" color="white" gutterBottom sx={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+              Discover Your Next Favorite Movie
+            </Typography>
+            <Typography variant="h5" color="white" paragraph sx={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+              Personalized recommendations based on your taste
+            </Typography>
+            <Button variant="contained" size="large" sx={{ mt: 2 }}>
+              Explore Now
+            </Button>
+          </Box>
         </Container>
       </Paper>
 
@@ -103,30 +111,13 @@ const Home = () => {
         <Typography variant="h4" component="h2" gutterBottom>
           New Releases
         </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            gap: 2,
-            overflowX: 'auto',
-            pb: 2,
-            '&::-webkit-scrollbar': {
-              height: '8px',
-            },
-            '&::-webkit-scrollbar-track': {
-              backgroundColor: 'rgba(0,0,0,0.1)',
-            },
-            '&::-webkit-scrollbar-thumb': {
-              backgroundColor: 'rgba(0,0,0,0.2)',
-              borderRadius: '4px',
-            },
-          }}
-        >
+        <Grid container spacing={4}>
           {newReleases.map((movie) => (
-            <Box key={movie.id} sx={{ minWidth: { xs: '85%', sm: '300px', md: '250px' } }}>
+            <Grid item key={movie.id} xs={12} sm={6} md={3}>
               <MovieCard {...movie} />
-            </Box>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Box>
 
       {/* Trending Movies */}
