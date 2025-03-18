@@ -203,8 +203,8 @@ const Rankings = () => {
       </Paper>
       
       {/* Rankings Table */}
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="movie rankings table">
+      <TableContainer component={Paper} sx={{ mt: 3, overflowX: 'auto' }}>
+        <Table sx={{ minWidth: 650 }}>
           <TableHead>
             <TableRow>
               <TableCell 
@@ -221,24 +221,25 @@ const Rankings = () => {
               </TableCell>
               <TableCell 
                 onClick={() => handleSort('userScore')}
+                align="center"
                 sx={{ cursor: 'pointer', fontWeight: 'bold' }}
               >
-                Your Score {sortBy === 'userScore' && (sortOrder === 'asc' ? '↑' : '↓')}
+                Your Rating {sortBy === 'userScore' && (sortOrder === 'asc' ? '↑' : '↓')}
               </TableCell>
               <TableCell 
                 onClick={() => handleSort('globalScore')}
+                align="center"
                 sx={{ cursor: 'pointer', fontWeight: 'bold' }}
               >
-                Global Score {sortBy === 'globalScore' && (sortOrder === 'asc' ? '↑' : '↓')}
+                Global Rating {sortBy === 'globalScore' && (sortOrder === 'asc' ? '↑' : '↓')}
               </TableCell>
               <TableCell 
                 onClick={() => handleSort('year')}
+                align="center"
                 sx={{ cursor: 'pointer', fontWeight: 'bold' }}
               >
                 Year {sortBy === 'year' && (sortOrder === 'asc' ? '↑' : '↓')}
               </TableCell>
-              <TableCell>Genre</TableCell>
-              <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

@@ -1,10 +1,9 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0;
+  text-align: left;
   background-color: #ffffff;
-  border: 1px solid #cccccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 

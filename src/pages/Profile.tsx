@@ -140,9 +140,9 @@ const Profile = () => {
         {/* Watch History Tab */}
         <TabPanel value={tabValue} index={0}>
           <Typography variant="h6" gutterBottom>Recently Watched</Typography>
-          <Grid container spacing={3} sx={{ width: '100%' }}>
+          <Grid container spacing={3}>
             {watchHistoryData.map((movie) => (
-              <Grid item key={movie.id} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+              <Grid item key={movie.id} xs={12} sm={6} md={3}>
                 <Box sx={{ position: 'relative', width: '100%' }}>
                   <MovieCard {...movie} />
                   <Typography 
@@ -169,9 +169,9 @@ const Profile = () => {
         {/* My Reviews Tab */}
         <TabPanel value={tabValue} index={1}>
           <Typography variant="h6" gutterBottom>Your Reviews</Typography>
-          <Grid container spacing={3} sx={{ width: '100%' }}>
+          <Grid container spacing={3}>
             {reviewsData.map((review) => (
-              <Grid item key={review.id} xs={12} sx={{ display: 'flex' }}>
+              <Grid item key={review.id} xs={12}>
                 <Paper key={review.id} sx={{ mb: 2, p: 2, width: '100%' }}>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                     <Typography variant="h6">{review.movieTitle}</Typography>
@@ -199,9 +199,9 @@ const Profile = () => {
         {/* Watchlist Tab */}
         <TabPanel value={tabValue} index={2}>
           <Typography variant="h6" gutterBottom>Movies to Watch</Typography>
-          <Grid container spacing={3} sx={{ width: '100%' }}>
+          <Grid container spacing={3}>
             {watchlistData.map((movie) => (
-              <Grid item key={movie.id} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+              <Grid item key={movie.id} xs={12} sm={6} md={3}>
                 <Box sx={{ position: 'relative', width: '100%' }}>
                   <MovieCard {...movie} />
                   <Button 

@@ -188,7 +188,7 @@ const Streaming = () => {
         <Typography variant="h5" component="h2" gutterBottom>
           Service Comparison
         </Typography>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
           <Table sx={{ minWidth: 650 }}>
             <TableHead>
               <TableRow>
