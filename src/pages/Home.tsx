@@ -73,16 +73,18 @@ const Home = () => {
         />
         <Container maxWidth="lg" sx={{ position: 'relative', p: { xs: 3, md: 6 } }}>          
           <Box sx={{ 
-            backgroundColor: 'rgba(0,0,0,0.6)', 
+            backgroundColor: 'rgba(255,255,255,0.7)', 
             p: 3, 
             borderRadius: 2,
             backdropFilter: 'blur(2px)',
-            maxWidth: 'fit-content'
+            maxWidth: 'fit-content',
+            margin: '0 auto',
+            textAlign: 'center'
           }}>
-            <Typography component="h1" variant="h3" color="white" gutterBottom sx={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+            <Typography component="h1" variant="h3" color="white" gutterBottom sx={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)', textAlign: 'center' }} className="hero-text">
               Discover Your Next Favorite Movie
             </Typography>
-            <Typography variant="h5" color="white" paragraph sx={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+            <Typography variant="h5" color="white" paragraph sx={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)', textAlign: 'center' }} className="hero-text">
               Personalized recommendations based on your taste
             </Typography>
             <Button variant="contained" size="large" sx={{ mt: 2 }}>

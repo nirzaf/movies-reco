@@ -59,6 +59,12 @@ a, p, h1, h2, h3, h4, h5, h6, span, div {
   color: #333333 !important;
 }
 
+/* Hero section text override */
+.hero-text {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7) !important;
+}
+
 /* Special case for featured service paper */
 [style*="background-image: linear-gradient"] {
   background-image: none !important;
