@@ -2,10 +2,21 @@ import { Box, Typography, Grid, Paper, Avatar, Tabs, Tab, List, ListItem, Divide
 import { useState } from 'react';
 import MovieCard from '../components/common/MovieCard';
 
+// Import movie poster images
+import shawshankPoster from '../assets/images/movie-posters/shawshank.svg';
+import darkKnightPoster from '../assets/images/movie-posters/dark-knight.svg';
+import oppenheimerPoster from '../assets/images/movie-posters/oppenheimer.svg';
+import barbiePoster from '../assets/images/movie-posters/barbie.svg';
+import godfatherPoster from '../assets/images/movie-posters/godfather.svg';
+import poorThingsPoster from '../assets/images/movie-posters/poor-things.svg';
+
+// Import user profile image
+import userProfileAvatar from '../assets/images/profiles/user-profile.svg';
+
 // Mock user data
 const userData = {
   username: 'MovieLover42',
-  avatar: 'https://via.placeholder.com/150',
+  avatar: userProfileAvatar,
   memberSince: 'January 2022',
   watchedMovies: 127,
   reviews: 48,
@@ -14,10 +25,10 @@ const userData = {
 
 // Mock watch history data
 const watchHistoryData = [
-  { id: 1, title: 'The Shawshank Redemption', imageUrl: 'https://via.placeholder.com/300x450?text=Shawshank', rating: 9.3, genre: 'Drama', year: 1994, watchedDate: '2023-12-15' },
-  { id: 3, title: 'The Dark Knight', imageUrl: 'https://via.placeholder.com/300x450?text=Dark+Knight', rating: 9.0, genre: 'Action, Crime, Drama', year: 2008, watchedDate: '2023-12-10' },
-  { id: 5, title: 'Oppenheimer', imageUrl: 'https://via.placeholder.com/300x450?text=Oppenheimer', rating: 8.4, genre: 'Biography, Drama', year: 2023, watchedDate: '2023-12-05' },
-  { id: 8, title: 'Barbie', imageUrl: 'https://via.placeholder.com/300x450?text=Barbie', rating: 7.0, genre: 'Adventure, Comedy', year: 2023, watchedDate: '2023-11-28' },
+  { id: 1, title: 'The Shawshank Redemption', imageUrl: shawshankPoster, rating: 9.3, genre: 'Drama', year: 1994, watchedDate: '2023-12-15' },
+  { id: 3, title: 'The Dark Knight', imageUrl: darkKnightPoster, rating: 9.0, genre: 'Action, Crime, Drama', year: 2008, watchedDate: '2023-12-10' },
+  { id: 5, title: 'Oppenheimer', imageUrl: oppenheimerPoster, rating: 8.4, genre: 'Biography, Drama', year: 2023, watchedDate: '2023-12-05' },
+  { id: 8, title: 'Barbie', imageUrl: barbiePoster, rating: 7.0, genre: 'Adventure, Comedy', year: 2023, watchedDate: '2023-11-28' },
 ];
 
 // Mock reviews data
@@ -29,9 +40,9 @@ const reviewsData = [
 
 // Mock watchlist data
 const watchlistData = [
-  { id: 2, title: 'The Godfather', imageUrl: 'https://via.placeholder.com/300x450?text=Godfather', rating: 9.2, genre: 'Crime, Drama', year: 1972 },
-  { id: 4, title: 'Pulp Fiction', imageUrl: 'https://via.placeholder.com/300x450?text=Pulp+Fiction', rating: 8.8, genre: 'Crime, Drama', year: 1994 },
-  { id: 6, title: 'Poor Things', imageUrl: 'https://via.placeholder.com/300x450?text=Poor+Things', rating: 8.2, genre: 'Comedy, Drama, Sci-Fi', year: 2023 },
+  { id: 2, title: 'The Godfather', imageUrl: godfatherPoster, rating: 9.2, genre: 'Crime, Drama', year: 1972 },
+  { id: 4, title: 'Pulp Fiction', imageUrl: shawshankPoster, rating: 8.8, genre: 'Crime, Drama', year: 1994 },
+  { id: 6, title: 'Poor Things', imageUrl: poorThingsPoster, rating: 8.2, genre: 'Comedy, Drama, Sci-Fi', year: 2023 },
 ];
 
 interface TabPanelProps {
@@ -49,10 +60,11 @@ function TabPanel(props: TabPanelProps) {
       hidden={value !== index}
       id={`profile-tabpanel-${index}`}
       aria-labelledby={`profile-tab-${index}`}
+      style={{ width: '100%' }}
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: { xs: 2, sm: 3 }, width: '100%', maxWidth: '100%' }}>
           {children}
         </Box>
       )}
@@ -115,9 +127,9 @@ const Profile = () => {
       </Paper>
 
       {/* Profile Content */}
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: '100%', overflow: 'hidden' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={tabValue} onChange={handleTabChange} aria-label="profile tabs">
+          <Tabs value={tabValue} onChange={handleTabChange} aria-label="profile tabs" variant="fullWidth" sx={{ minHeight: 48 }}>
             <Tab label="Watch History" />
             <Tab label="My Reviews" />
             <Tab label="Watchlist" />
@@ -128,10 +140,10 @@ const Profile = () => {
         {/* Watch History Tab */}
         <TabPanel value={tabValue} index={0}>
           <Typography variant="h6" gutterBottom>Recently Watched</Typography>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} sx={{ width: '100%' }}>
             {watchHistoryData.map((movie) => (
-              <Grid item key={movie.id} xs={12} sm={6} md={3}>
-                <Box sx={{ position: 'relative' }}>
+              <Grid item key={movie.id} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+                <Box sx={{ position: 'relative', width: '100%' }}>
                   <MovieCard {...movie} />
                   <Typography 
                     variant="caption" 
@@ -157,38 +169,40 @@ const Profile = () => {
         {/* My Reviews Tab */}
         <TabPanel value={tabValue} index={1}>
           <Typography variant="h6" gutterBottom>Your Reviews</Typography>
-          <List>
+          <Grid container spacing={3} sx={{ width: '100%' }}>
             {reviewsData.map((review) => (
-              <Paper key={review.id} sx={{ mb: 2, p: 2 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-                  <Typography variant="h6">{review.movieTitle}</Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {new Date(review.date).toLocaleDateString()}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <Typography variant="body2" sx={{ mr: 1 }}>Your rating:</Typography>
-                  <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-                    {review.rating.toFixed(1)}/10
-                  </Typography>
-                </Box>
-                <Typography variant="body1">{review.content}</Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
-                  <Button size="small" color="primary">Edit</Button>
-                  <Button size="small" color="error" sx={{ ml: 1 }}>Delete</Button>
-                </Box>
-              </Paper>
+              <Grid item key={review.id} xs={12} sx={{ display: 'flex' }}>
+                <Paper key={review.id} sx={{ mb: 2, p: 2, width: '100%' }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                    <Typography variant="h6">{review.movieTitle}</Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {new Date(review.date).toLocaleDateString()}
+                    </Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                    <Typography variant="body2" sx={{ mr: 1 }}>Your rating:</Typography>
+                    <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+                      {review.rating.toFixed(1)}/10
+                    </Typography>
+                  </Box>
+                  <Typography variant="body1">{review.content}</Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+                    <Button size="small" color="primary">Edit</Button>
+                    <Button size="small" color="error" sx={{ ml: 1 }}>Delete</Button>
+                  </Box>
+                </Paper>
+              </Grid>
             ))}
-          </List>
+          </Grid>
         </TabPanel>
 
         {/* Watchlist Tab */}
         <TabPanel value={tabValue} index={2}>
           <Typography variant="h6" gutterBottom>Movies to Watch</Typography>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} sx={{ width: '100%' }}>
             {watchlistData.map((movie) => (
-              <Grid item key={movie.id} xs={12} sm={6} md={3}>
-                <Box sx={{ position: 'relative' }}>
+              <Grid item key={movie.id} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+                <Box sx={{ position: 'relative', width: '100%' }}>
                   <MovieCard {...movie} />
                   <Button 
                     size="small" 
@@ -214,7 +228,7 @@ const Profile = () => {
 
         {/* Account Settings Tab */}
         <TabPanel value={tabValue} index={3}>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} sx={{ width: '100%' }}>
             {/* Personal Information */}
             <Grid item xs={12} md={6}>
               <Paper sx={{ p: 3 }}>
