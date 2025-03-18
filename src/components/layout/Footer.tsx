@@ -8,17 +8,18 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        py: 3,
+        py: 4,
         px: 2,
         mt: 'auto',
         backgroundColor: (theme) => theme.palette.grey[900],
         color: 'white',
+        borderTop: '1px solid rgba(255, 255, 255, 0.3)',
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
+        <Grid container spacing={4} alignItems="flex-start">
+          <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+            <Typography variant="h6" gutterBottom fontWeight="bold">
               MovieReco
             </Typography>
             <Typography variant="body2">
@@ -29,42 +30,42 @@ const Footer = () => {
             </Typography>
           </Grid>
           
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
+          <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+            <Typography variant="h6" gutterBottom fontWeight="bold">
               Quick Links
             </Typography>
-            <Typography variant="body2">
-              <MuiLink href="/" color="inherit" sx={{ display: 'block', mb: 1 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <MuiLink href="/" color="inherit" sx={{ mb: 1, '&:hover': { color: 'primary.main' } }}>
                 Home
               </MuiLink>
-              <MuiLink href="/rankings" color="inherit" sx={{ display: 'block', mb: 1 }}>
+              <MuiLink href="/rankings" color="inherit" sx={{ mb: 1, '&:hover': { color: 'primary.main' } }}>
                 Rankings
               </MuiLink>
-              <MuiLink href="/streaming" color="inherit" sx={{ display: 'block', mb: 1 }}>
+              <MuiLink href="/streaming" color="inherit" sx={{ mb: 1, '&:hover': { color: 'primary.main' } }}>
                 Streaming
               </MuiLink>
-              <MuiLink href="/profile" color="inherit" sx={{ display: 'block', mb: 1 }}>
+              <MuiLink href="/profile" color="inherit" sx={{ mb: 1, '&:hover': { color: 'primary.main' } }}>
                 Profile
               </MuiLink>
-            </Typography>
+            </Box>
           </Grid>
           
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
+          <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+            <Typography variant="h6" gutterBottom fontWeight="bold">
               Connect With Us
             </Typography>
-            <Box>
-              <IconButton color="inherit" aria-label="Facebook">
+            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-start' }, mb: 2 }}>
+              <IconButton color="inherit" aria-label="Facebook" sx={{ mr: 1, '&:hover': { color: '#4267B2' } }}>
                 <FacebookIcon />
               </IconButton>
-              <IconButton color="inherit" aria-label="Twitter">
+              <IconButton color="inherit" aria-label="Twitter" sx={{ mr: 1, '&:hover': { color: '#1DA1F2' } }}>
                 <TwitterIcon />
               </IconButton>
-              <IconButton color="inherit" aria-label="Instagram">
+              <IconButton color="inherit" aria-label="Instagram" sx={{ mr: 1, '&:hover': { color: '#C13584' } }}>
                 <InstagramIcon />
               </IconButton>
             </Box>
-            <Typography variant="body2" sx={{ mt: 2 }}>
+            <Typography variant="body2">
               Contact: info@moviereco.com
             </Typography>
           </Grid>
